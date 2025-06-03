@@ -1,0 +1,7 @@
+<validation-overrides>
+    {% if validations %}
+    {% for validation in validations %}
+    <allow until="{{ validation.until }}"{% if validation.comment %} comment="{{ validation.comment }}"{% endif %}>{{ validation.id }}</allow>
+    {% endfor %}
+    {% endif %}
+</validation-overrides>
